@@ -173,3 +173,18 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 
 !ENTRY org.eclipse.core.net 1 0 2014-01-06 14:37:11.285
 !MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.egit.core 4 0 2014-01-06 16:03:34.966
+!MESSAGE An exception occurred during push on URI https://github.com/TDepelley/handigab.git: https://github.com/TDepelley/handigab.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/TDepelley/handigab.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:479)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:398)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:154)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1173)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:190)
+	at org.eclipse.egit.ui.internal.push.PushWizard$PushJob.run(PushWizard.java:298)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.egit.ui 4 0 2014-01-06 16:03:34.981
+!MESSAGE Can't connect to any repository: https://github.com/TDepelley/handigab.git (https://github.com/TDepelley/handigab.git: not authorized)
